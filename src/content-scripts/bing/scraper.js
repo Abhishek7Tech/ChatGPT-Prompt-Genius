@@ -45,7 +45,7 @@ function saveConvo() {
     let c = getShadowElements(chatDIV)
     let messages = c.querySelectorAll(".content")
     if (!startsWithUser(c)){
-        messages[0].classList.add("ignore") // removes "Thanks for clearing my head!" message
+        messages[0].remove() // removes "Thanks for clearing my head!" message
     }
     let i = 0
     for (let message of messages){
