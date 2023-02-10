@@ -3,3 +3,4 @@ dist_mv2/
 dist_mv3/
 releases/
 .DS_Store
+/public
