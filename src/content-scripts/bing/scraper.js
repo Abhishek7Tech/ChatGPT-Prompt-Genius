@@ -4,7 +4,6 @@ let firstTime = true;
 
 function chatIsActive(){
     let chatStatus = document.querySelector("cib-serp")?.getAttribute("mode")
-    console.log(chatStatus)
     return chatStatus === "conversation"
 }
 
