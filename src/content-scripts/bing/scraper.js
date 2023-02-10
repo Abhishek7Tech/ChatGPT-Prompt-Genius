@@ -60,6 +60,8 @@ function saveConvo() {
     }
     if (firstTime){
         id = generateUUID()
+        const newChatButton = document.querySelector("cib-serp").shadowRoot.querySelector("cib-action-bar").shadowRoot.querySelector(".button-compose")
+        newChatButton.addEventListener("click", () => firstTime = true)
     }
     let thread = {convo: convo, title: document.title, date: getDate(), time: getTime(), id:id ?? generateUUID(), favorite: false, unified_id: false}
     if (firstTime){
