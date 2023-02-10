@@ -17,6 +17,7 @@ function nonMessage(element) {
     for (let i = 0; i < element.children.length; i++) {
         if (element.children[i].classList.contains("meta-text")) return true;
         if (element.classList.contains("attributions")) return true;
+        if (element.classList.contains("ignore")) return true;
     }
 
     return false;
@@ -44,7 +45,7 @@ function saveConvo() {
     let c = getShadowElements(chatDIV)
     let messages = c.querySelectorAll(".content")
     if (!startsWithUser(c)){
-        messages.shift() // removes "Thanks for clearing my head!" message
+        messages[0].classList.add("ignore") // removes "Thanks for clearing my head!" message
     }
     let i = 0
     for (let message of messages){
